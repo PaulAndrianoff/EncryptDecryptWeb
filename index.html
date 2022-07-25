@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Document</title>
+
+    <link rel="stylesheet" href="src/css/initialiser.css">
+    <link rel="stylesheet" href="src/css/main.css">
+</head>
+
+<body>
+    <div class="app_encrypte">
+        <div class="params">
+            <h1>Encrypte/Decrypte</h1>
+            <div class="sections">
+                <label for="key_a">A</label>
+                <input type="number" value="1" min="0" class="key_a">
+            </div>
+            <div class="sections">
+                <label for="key_b">B</label>
+                <input type="number" value="3" class="key_b">
+            </div>
+            <div class="sections">
+                <label for="key_word">Key word</label>
+                <input type="text" value="Hello" class="key_word">
+            </div>
+            <div class="sections">
+                <button class="reverse rand_key">Create keys</button>
+            </div>
+            <div class="sections">
+                <label for="key_alpha">Alphabet</label>
+                <textarea name="key_alpha" class="key_alpha" id="key_alpha" cols="30" rows="10">ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789 .!?,;%$@()</textarea>
+            </div>
+            <div class="sections">
+                <label for="encryption_type">Mode</label>
+                <select name="encryption_type" id="encryption_type" class="encryption_type">
+                    <option value="enc_affine">Affine - Encrypt</option>
+                    <option value="dec_affine">Affine - Decrypt</option>
+                    <option value="enc_vigener">Vigener - Encrypt</option>
+                    <option value="dec_vigener">Vigener - Decrypt</option>
+                </select>
+            </div>
+            <div class="sections">
+                <input type="submit" value="Submit" class="submit">
+            </div>
+        </div>
+
+        <div class="messages">
+            <textarea name="main_message" class="main_message" id="" cols="30" rows="10" placeholder="your message..."></textarea>
+            <div class="order">
+                <h2>Orders</h2>
+                <div class="current_order">
+                    <div><span>No order</span></div>
+                </div>
+                <button class="reverse setorder">Set default order</button>
+                <button class="reverse encAll">Reverse all order</button>
+                <button class="reverse reverse_default_order">Reverse default</button>
+                <button class="reverse clear">clear order</button>
+                <button class="reverse open--file">Upload file</button>
+                <button class="reverse save--file">Save file</button>
+                <button class="reverse save--order">Save order</button>
+                <button class="reverse save--keys">Save keys</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="popup upload_files">
+        <div class="popup--header">
+            <h2>Upload file</h2>
+            <span class="close">X</span>
+        </div>
+        <form action="">
+            <label for="upload--file" class="upload">
+                <span>Upload a text file</span>
+                <input type="file" name="upload--file" id="upload--file" hidden>
+            </label>
+
+            <label for="upload--file--order" class="upload">
+                <span>Upload encrypt order</span>
+                <input type="file" name="upload--file--order" id="upload--file--order" hidden>
+            </label>
+
+            <label for="upload--file--key" class="upload">
+                <span>Upload configuration</span>
+                <input type="file" name="upload--file--key" id="upload--file--key" hidden>
+            </label>
+        </form>
+    </div>
+
+    <div class="popup set_rand_keys">
+        <div class="popup--header">
+            <h2>Upload file</h2>
+            <span class="close">X</span>
+        </div>
+        <form action="">
+            <div class="key_config">
+                <div class="key_config">
+                    <label for="range_min">Min "A"</label>
+                    <input type="number" name="range_min_a" id="range_min_a">
+                </div>
+                <div class="key_config">
+                    <label for="range_min">Max "A"</label>
+                    <input type="number" name="range_max_a" id="range_max_a">
+                </div>
+            </div>
+            <div class="key_config">
+                <div class="key_config">
+                    <label for="range_min">Min "B"</label>
+                    <input type="number" name="range_min_b" id="range_min_b">
+                </div>
+                <div class="key_config">
+                    <label for="range_min">Max "B"</label>
+                    <input type="number" name="range_max_b" id="range_max_b">
+                </div>
+            </div>
+            <div class="key_config">
+                <label for="range_min">Keyword length</label>
+                <input type="number" name="range_min" id="range_min">
+            </div>
+            <div>
+                <input type="submit" value="Generate random key" class="set_random_key">
+            </div>
+        </form>
+    </div>
+
+    <div class="curtain"></div>
+
+    <!-- LOAD JS -->
+    <script src="src/js/librairy.js"></script>
+    <script src="src/js/FilesSaver.js"></script>
+    <script src="src/js/math.js"></script>
+    <script src="src/js/config.js"></script>
+    <script src="src/js/defaultOrder.js"></script>
+    <script src="src/js/afine.js"></script>
+    <script src="src/js/vigenere.js"></script>
+    <script src="src/js/hideMessage.js"></script>
+    <script src="src/js/setRandomKeys.js"></script>
+    <script src="src/js/main.js"></script>
+</body>
+
+</html>

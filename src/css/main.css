@@ -1,0 +1,241 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.app_encrypte {
+    display: flex;
+    max-width: 80%;
+    margin: 60px auto;
+}
+
+.params {
+    display: inline-block;
+    box-shadow: 0px 0px 4px #444444cc;
+}
+
+.params h1 {
+    font-size: 1.2em;
+    padding: 20px;
+    border-bottom: 1px solid #444;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.params .sections label {
+    display: inline-block;
+    background: #7799AA;
+    padding: 10px 10px;
+    color: #FFF;
+    text-transform: uppercase;
+    font-size: 0.8em;
+    width: 80px;
+    text-align: center;
+}
+
+.params .sections {
+    display: flex;
+}
+
+.params .sections:not(:last-of-type) {
+    border-bottom: 1px solid #444;
+}
+
+input[type=submit],
+.popup label.upload,
+.reverse {
+    display: block;
+    width: 100%;
+    padding: 10px 0px;
+    background: #7785aa;
+    color: #FFF;
+    height: auto;
+    cursor: pointer;
+    border: 1px solid #7785aa;
+    transition: 0.3s all ease;
+}
+
+input[type=submit]:hover,
+.popup label.upload:hover,
+.reverse:hover {
+    background: #FFF;
+    color: #7785aa;
+}
+
+input[type=text],
+input[type=number] {
+    display: block;
+    width: 100%;
+    padding: 17px 5px;
+}
+
+select {
+    display: block;
+    width: 100%;
+    appearance: auto;
+    padding: 5px;
+    height: auto;
+    cursor: pointer;
+}
+
+
+/* MESSAGES */
+
+.messages {
+    flex-grow: 3;
+    display: flex;
+}
+
+textarea {
+    display: inline-block;
+    padding: 20px;
+    border: 1px solid #444;
+    min-height: 200px;
+    height: 100%;
+    width: 100%;
+    min-width: 150px;
+    font-size: 0.8em;
+    flex-grow: 2;
+}
+
+.order {
+    flex-grow: 1;
+    border: 1px solid #444;
+    text-align: center;
+    width: 150px;
+}
+
+.order h2 {
+    padding: 10px 0px;
+    background: #7799AA;
+    color: #FFF;
+}
+
+.order .current_order {
+    border-bottom: 1px solid #DDD;
+    font-size: 0.9em;
+    max-height: 320px;
+    overflow: auto;
+}
+
+.order .current_order div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.order .current_order div:not(:last-of-type) {
+    border-bottom: 1px solid #DDD;
+}
+
+.order .current_order span {
+    padding: 5px 0px;
+    display: block;
+    cursor: default;
+    flex-grow: 1;
+}
+
+.order .current_order span:hover {
+    background: #DDD;
+}
+
+.order .current_order span:first-of-type {
+    background: rgb(196, 193, 182);
+}
+
+.order button:not(:last-of-type) {
+    border-bottom: 1px solid #DDD;
+}
+
+
+/* POPUP */
+
+.popup {
+    position: absolute;
+    display: none;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 1px solid #DDD;
+    min-width: 300px;
+    max-width: 400px;
+    padding: 40px;
+    background: #FFF;
+    z-index: 5;
+}
+
+.curtain {
+    display: none;
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: #000;
+    opacity: 0.6;
+}
+
+.curtain.active {
+    display: block;
+}
+
+.popup.active {
+    display: block;
+}
+
+.popup--header {
+    position: relative;
+}
+
+.popup--header h2 {
+    padding: 20px 0px;
+    text-align: center;
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.popup--header span {
+    position: absolute;
+    top: 50%;
+    right: 0%;
+    transform: translate(0%, -50%);
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.popup--header span:hover {
+    color: red;
+}
+
+.popup label.upload {
+    display: block;
+    padding: 20px 40px;
+    background: #7785aa;
+    color: #FFF;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+
+.popup.set_rand_keys .key_config {
+    display: flex;
+    margin-bottom: 10px;
+}
+
+.popup.set_rand_keys .key_config .key_config:not(:last-of-type) {
+    margin-right: 5px;
+}
+
+.popup.set_rand_keys label {
+    background: #7799AA;
+    padding: 10px;
+    color: #FFF;
+    width: 150px;
+    text-align: center;
+}
+
+.popup.set_rand_keys .key_config input {
+    display: inline-block;
+    border: 1px solid #DDD;
+    padding: 10px;
+    height: auto;
+}
